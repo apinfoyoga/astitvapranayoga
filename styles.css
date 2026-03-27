@@ -1,31 +1,28 @@
 :root {
-  /* Color Palette - Traditional & Serene */
-  --bg-primary: #fdfaf7;
-  /* Off-white / Cream */
-  --bg-secondary: #f6f1eb;
-  /* Sand */
-  --text-primary: #2d2a26;
-  /* Deep Charcoal */
-  --text-secondary: #423f3b;
-  /* Darkened Muted Grey-Brown */
-  --accent: #c67d53;
-  /* Terracotta / Saffron blend */
-  --accent-dark: #a05e3a;
-  --accent-light: #e8d5c8;
-  --gold: #d4a373;
+  /* Color Palette - Traditional & Serene matching logo */
+  --bg-primary: #fbfaf8;
+  --bg-secondary: #f4eee8;
+  --text-primary: #2b1f1c;
+  --text-secondary: #4a3831;
+  /* Deep Maroon red from logo */
+  --accent: #501000;
+  --accent-dark: #3a0b00;
+  --accent-light: #8a3a26;
+  --gold: #b58b5a;
   --white: #ffffff;
-  --border: rgba(45, 42, 38, 0.08);
+  --border: rgba(80, 16, 0, 0.1);
 
   /* Typography */
-  --font-heading: "Playfair Display", serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Lora", serif;
+  --font-display: "Cinzel", serif;
 
   /* Spacing & Misc */
   --max-width: 1200px;
   --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.02);
-  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 4px 10px rgba(80, 16, 0, 0.04);
+  --shadow-md: 0 10px 30px rgba(80, 16, 0, 0.08);
+  --shadow-lg: 0 20px 50px rgba(80, 16, 0, 0.15);
 }
 
 *,
@@ -125,7 +122,12 @@ a {
   display: flex;
   flex-direction: column;
   padding: 0 5vw;
-  background: linear-gradient(to bottom, rgba(45, 42, 38, 0.4) 0%, rgba(45, 42, 38, 0.2) 50%, rgba(45, 42, 38, 0.6) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(43, 31, 28, 0.5) 0%,
+    rgba(43, 31, 28, 0.3) 50%,
+    rgba(43, 31, 28, 0.7) 100%
+  );
 }
 
 /* --- Navigation --- */
@@ -146,8 +148,8 @@ a {
 }
 
 .brand-logo {
-  width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
   background: var(--white);
   border-radius: 50%;
   display: flex;
@@ -158,10 +160,11 @@ a {
 }
 
 .nav-title {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 500;
   color: var(--white);
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .nav-links {
@@ -171,11 +174,12 @@ a {
 }
 
 .nav-links a {
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
   font-size: 0.95rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .nav-links a:hover {
@@ -197,6 +201,7 @@ a {
 }
 
 .eyebrow {
+  font-family: var(--font-display);
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 0.85rem;
@@ -232,13 +237,15 @@ h1 {
 
 .btn-primary,
 .btn-secondary {
-  padding: 0.9rem 2rem;
-  border-radius: 4px;
+  font-family: var(--font-display);
+  padding: 0.9rem 2.2rem;
+  border-radius: 2px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.85rem;
   cursor: pointer;
+  transition: var(--transition);
 }
 
 .btn-primary {
@@ -419,7 +426,11 @@ main section {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 50% 50%, rgba(212, 163, 115, 0.05) 0%, transparent 70%);
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(212, 163, 115, 0.05) 0%,
+    transparent 70%
+  );
   pointer-events: none;
 }
 
@@ -452,23 +463,25 @@ main section {
 .metric-info {
   display: flex;
   flex-direction: column;
+  padding-left: 0.5rem;
 }
 
 .metric-number {
   font-family: var(--font-heading);
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   color: var(--white);
   line-height: 1;
   margin: 0;
 }
 
 .metric-label {
-  font-size: 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.4);
-  font-weight: 600;
-  margin-top: 2px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  margin-top: 4px;
 }
 
 .metric-stat:hover .metric-icon {
@@ -517,10 +530,11 @@ main section {
 }
 
 .tag {
+  font-family: var(--font-display);
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   color: var(--accent);
 }
 
@@ -725,8 +739,9 @@ main section {
 }
 
 .footer-brand span {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  letter-spacing: 2px;
 }
 
 .footer-links {
@@ -839,7 +854,6 @@ main section {
   grid-column: span 2;
   grid-row: span 2;
 }
-
 
 /* --- Essence Section --- */
 .essence {
@@ -999,7 +1013,6 @@ main section {
 
 /* --- Responsive --- */
 @media (max-width: 1024px) {
-
   .about-layout,
   .philosophy-grid,
   .contact-container,
