@@ -353,13 +353,13 @@ main section {
 .about-photo-main {
   grid-column: 1 / 6;
   grid-row: 1 / 6;
-  background-image: url("https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=1200");
+  background-image: url("assets/aspy/about_1.jpg");
 }
 
 .about-photo-side-1 {
   grid-column: 4 / 7;
   grid-row: 4 / 7;
-  background-image: url("https://images.pexels.com/photos/3822864/pexels-photo-3822864.jpeg?auto=compress&cs=tinysrgb&w=1200");
+  background-image: url("assets/aspy/about_2.jpg");
   border: 8px solid var(--white);
 }
 
