@@ -1157,7 +1157,8 @@ main section {
   }
 
   .about-gallery {
-    height: 500px;
+    height: 450px;
+    margin-bottom: 3rem;
   }
 
   .gallery-grid {
@@ -1178,7 +1179,12 @@ main section {
 
 @media (max-width: 768px) {
   main section {
-    padding: 5rem 5vw;
+    padding: 4rem 5vw;
+  }
+
+  .about-gallery {
+    height: 350px;
+    margin-bottom: 2rem;
   }
 
   .philosophy-quote blockquote {
