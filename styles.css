@@ -790,7 +790,7 @@ main section {
 .footer {
   background: var(--text-primary);
   color: var(--white);
-  padding: 3rem 5vw 2rem;
+  padding: 1.5rem 5vw;
 }
 
 .footer-inner {
@@ -802,9 +802,9 @@ main section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .footer-brand {
@@ -825,21 +825,21 @@ main section {
   letter-spacing: 2px;
 }
 
-.footer-links {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem 4rem;
+.footer-maintainer {
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
 }
 
-.footer-links a {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.footer-maintainer a {
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 2px;
 }
 
-.footer-links a:hover {
+.footer-maintainer a:hover {
   color: var(--gold);
+  border-color: var(--gold);
 }
 
 .footer-bottom {
