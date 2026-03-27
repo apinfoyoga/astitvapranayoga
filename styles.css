@@ -530,46 +530,88 @@ main section {
 
 /* --- Offerings Section --- */
 .offerings {
+  padding: 10rem 5vw;
   background: var(--bg-primary);
 }
 
-.card-grid {
+.offerings-container {
   max-width: var(--max-width);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
-}
-
-.card {
-  background: var(--white);
-  padding: 2.2rem 1.8rem;
-  border-radius: 4px;
-  box-shadow: var(--shadow-md);
-  transition: var(--transition);
   display: flex;
   flex-direction: column;
+  gap: 8rem;
 }
 
-.card:hover {
-  transform: translateY(-10px);
+.offering-row {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.offering-row:hover {
+  transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
 }
 
-.card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
-  color: var(--text-primary);
+.offering-row.reverse {
+  flex-direction: row-reverse;
 }
 
-.card p {
-  color: var(--text-secondary);
-  margin-bottom: 1.5rem;
+.offering-content {
   flex: 1;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.tag {
+.offering-content .tag {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: var(--bg-secondary);
+  color: var(--accent);
   font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: fit-content;
+  border-radius: 4px;
+}
+
+.offering-content h3 {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.offering-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.offering-content .btn-primary {
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+.offering-visual {
+  flex: 1.2;
+  height: 500px;
+}
+
+.offering-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tag {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -1095,6 +1137,20 @@ main section {
   .about-layout,
   .philosophy-grid,
   .contact-container,
+  .offering-row, .offering-row.reverse {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .offering-content {
+    padding: 3rem 2rem;
+  }
+
+  .offering-visual {
+    width: 100%;
+    height: 350px;
+  }
+
   .essence-grid {
     grid-template-columns: 1fr;
     gap: 4rem;
@@ -1175,6 +1231,20 @@ main section {
     flex-direction: column;
     align-items: center;
     gap: 2.5rem;
+  }
+
+  .offering-row, .offering-row.reverse {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .offering-content {
+    padding: 3rem 2rem;
+  }
+
+  .offering-visual {
+    width: 100%;
+    height: 350px;
   }
 
   .essence-grid {
