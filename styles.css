@@ -71,26 +71,33 @@ a {
 .hero-slide {
   position: absolute;
   inset: 0;
+  background-image: none;
   background-size: cover;
   background-position: center;
   filter: brightness(0.65) saturate(0.9);
   opacity: 0;
-  animation: heroFade 15s infinite;
+  animation: heroFade 20s infinite;
 }
 
 .hero-slide-1 {
-  background-image: url("https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&cs=tinysrgb&w=1200");
+  background-image: url("assets/Hero/hero_1.jpg");
+  background-position: center 30%;
   animation-delay: 0s;
 }
 
 .hero-slide-2 {
-  background-image: url("https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=1200");
+  background-image: url("assets/Hero/hero_2.jpg");
   animation-delay: 5s;
 }
 
 .hero-slide-3 {
-  background-image: url("https://images.pexels.com/photos/3823063/pexels-photo-3823063.jpeg?auto=compress&cs=tinysrgb&w=1200");
+  background-image: url("assets/Hero/hero_3.jpg");
   animation-delay: 10s;
+}
+
+.hero-slide-4 {
+  background-image: url("assets/Hero/hero_4.jpg");
+  animation-delay: 15s;
 }
 
 @keyframes heroFade {
@@ -98,15 +105,15 @@ a {
     opacity: 0;
   }
 
-  10% {
+  5% {
     opacity: 1;
   }
 
-  33% {
+  20% {
     opacity: 1;
   }
 
-  43% {
+  25% {
     opacity: 0;
   }
 
